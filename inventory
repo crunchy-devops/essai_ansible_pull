@@ -1,0 +1,6 @@
+[centos7]
+1.home
+[centos7:vars]
+environment_name=development
+ansible_user=ansible
+ansible_python_interpreter=/usr/bin/python
