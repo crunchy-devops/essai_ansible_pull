@@ -1,9 +1,10 @@
 ---
 - hosts: localhost
+  gather_facts: no 
   tasks:
     - name: create file
-      file: state=touch path=/home/{{ansible_user}}/hostname.conf
+      file: state=touch path=/home/ansible/hostname.conf
     - name:  if line not there
       lineinfile: state=present
-                  dest=/home/{{ansible_user}}/hostname.conf
-                  line="Hostname={{ansible_hostname}}"
+                  dest=/home/ansible/hostname.conf
+                  line="Hostname=centos7"
