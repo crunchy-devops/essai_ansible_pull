@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   gather_facts: yes
+  connection: local
   tasks:
     - name: create file
       file: state=touch path=/home/ansible/hostname.conf
